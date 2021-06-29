@@ -1,3 +1,22 @@
+CREATE TABLE user_types (
+	id INT AUTO_INCREMENT,
+	type VARCHAR(255) UNIQUE,
+	created_at DATETIME,
+	updated_at DATETIME,
+	PRIMARY KEY(id)
+	)
+
+CREATE TABLE users(
+	id INT AUTO_INCREMENT,
+	type_id INT,
+	username VARCHAR(255) UNIQUE,
+	email VARCHAR(255) UNIQUE,
+	password VARCHAR(255),
+	created_at DATETIME,
+	updated_at DATETIME,
+	PRIMARY KEY(id),
+	FOREIGN KEY(type_id) REFERENCES user_types(id)
+	)
 CREATE TABLE gebruiker(
 	id INT AUTO_INCREMENT,
 	voornaam VARCHAR(255),

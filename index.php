@@ -1,7 +1,13 @@
+<?php
+include 'database.php';
+$db = new Database();
+var_dump($db);
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Examenoefening_Rizwan</title>
+	<title>Examenvoorbereiding</title>
 	<meta charset="utf-8">
 </head>
 
